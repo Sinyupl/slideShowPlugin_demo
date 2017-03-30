@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		.pages li{
+			background-color: rgba(255,255,255,0.2);
+		}
+		.active{
+			background-color: #fff!important;
+		}
+	</style>
+</head>
+<body>
+	<div class="slideplay">
+			<div class="sections">
+				<div class="section"><img src="images/1.jpg"/></div>
+				<div class="section"><img src="images/1.jpg"/></div>
+				<div class="section"><img src="images/1.jpg"/></div>
+			</div>
+		</div>
+		<script src="js/jquery-1.11.1.min.js"></script>
+		<script src="js/slideShow.js"></script>
+		<script>
+			var slideplay = new SlideShow($('.slideplay'));
+		</script>
+</body>
+</html>
