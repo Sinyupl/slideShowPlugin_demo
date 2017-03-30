@@ -1,0 +1,1 @@
+# slideShowPlugin_demo
