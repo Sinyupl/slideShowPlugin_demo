@@ -97,22 +97,28 @@ var SlideShow = (function(){
 				me.pageItem.eq(me.index).addClass(me.activeClass);
 				pages.css({
 					"position" : "absolute",
-					"width" : "20%",
-					"bottom" : "20px",
-					"right" : "10px",
+					"width" : "95%",
+					"padding-right" : "5%",
+					"bottom" : "3%",
+					"right" : "3%",
 					"z-index" : "999",
 					"overflow" : "hidden",
-					"text-align" : "right",
+					 "text-align" : "right",
+					"word-break" : "normal"
 
 				});
 				me.pageItem.css({
-					"float" : "left",
+					
 					"display" : "inline-block",
-					"width" : "20px",
-					"height" : "20px",
+					"width" : "2.5%",
 					"border-radius" : "50%",
-					"margin-left" : "8px"
+					"margin-left" : "1%"
 				});
+				var pageItemW = me.pageItem.width();
+			 	me.pageItem.css({"height" : pageItemW+"px"});
+			}
+			if(me.settings.arrow){
+				me.element.append('<div class="left-arrow"><div>&laquo</div></div><div class="right-arrow"><div>&raquo</div></div>');
 			}
 
 		},
@@ -147,7 +153,12 @@ var SlideShow = (function(){
 				},me.settings.interval)
 				},me.settings.interval);
 			});
-			
+			me.element.find('.left-arrow').on('touchstart', function(){
+				me.prev();
+			});
+			me.element.find('.right-arrow').on('touchstart', function(){
+				me.next();
+			});
 			
 		},
 		//滚动动画
@@ -180,7 +191,8 @@ SlideShow.prototype.defaults = {
 	height : "200px", //高度
 	interval : 4000, //轮播时间间隔
 	proportion : 0.6, //宽长比例，设置后height失效
-	nav : true //是否显示索引，需要自行编写li颜色和active颜色
+	nav : true, //是否显示索引，需要自行编写li颜色和active颜色
+	arrow : true //是否增加上下页按钮
 }
 
 //示范

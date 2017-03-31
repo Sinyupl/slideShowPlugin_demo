@@ -1,0 +1,52 @@
+.pages li{
+   background-color: rgba(255,255,255,0.2);
+}
+.active{
+   background-color: #fff!important;
+}
+.left-arrow{
+   width:10%;
+   height:30%;
+   top:35%;
+   position:absolute;
+   left:0;
+   z-index: 999;/*兼容ie8-*/
+   align-items: center;
+   vertical-align: middle;
+   background-color: rgba(255,255,255,0.5);
+}
+.left-arrow div{
+      vertical-align: middle;
+      font-size: 100px;
+      width: 100%;
+      height: 100%;
+      line-height: 100%;
+      text-align: center;
+      color:#666;
+}
+.right-arrow{
+   width:10%;
+   height:30%;
+   top:35%;
+   position:absolute;
+   right:0;
+   z-index: 999;/*兼容ie8-*/
+   align-items: center;
+   vertical-align: middle;
+   background-color: rgba(255,255,255,0.5);
+}
+.right-arrow div{
+      vertical-align: middle;
+      font-size: 100px;
+      width: 100%;
+      height: 100%;
+      line-height: 100%;
+      text-align: center;
+      color:#666;
+}
+.left-arrow div::before{
+   content: " "; display: inline-block; height: 100%; width: 1%; vertical-align: middle;
+}
+.right-arrow div::before{
+   content: " "; display: inline-block; height: 100%; width: 1%; vertical-align: middle;
+}
